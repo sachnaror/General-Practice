@@ -1,9 +1,24 @@
-int simpleArraySum(int ar_count, int* ar) {
-    int i;
-    int sum = 0;
-    for(i=0;i < ar_count;i++)
-    {
-         sum = sum + ar[i];
-    }
-    return sum;
+#include <iostream>
+using namespace std;
+
+int main() {
+  int t, a, output = 0;
+  cin >> t;
+  while(t--){
+    cin >> a;
+    output += a;
+  }
+  cout << output << endl;
+  return 0;
 }
+
+
+=============================================
+
+
+n = int(input())
+nums = list(map(int, input().split()))
+sum = 0
+for num in nums:
+    sum += num
+print(sum)

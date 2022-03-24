@@ -1,3 +1,40 @@
+
+
+Sum of elements of an list
+
+Given a list of integers, find the sum of its elements.
+
+
+Input
+    5
+    1 2 3 4 5
+
+
+
+
+    Where,
+
+The first line of input represents the size of the list.
+The second line contains the list elements, separated here by a single space.
+
+
+Output
+    15
+
+
+
+Here the given input list is [1 2 3 4 5]
+Sum of elements of list = 1 + 2 + 3 + 4 + 5 = 15.
+
+
+
+
+
+=============================================
+
+
+
+
 #include <iostream>
 using namespace std;
 

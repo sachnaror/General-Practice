@@ -1,0 +1,59 @@
+Sum of greatest and least elements of a list
+
+Given a non-empty list of integers, find the sum of the maximum value and the minimum value among all the elements of the list.
+
+
+
+Input
+
+    6
+    10 15 4 19 2 12
+
+
+    Where,
+
+The first line represents the size of the list.
+The second line represents list elements.
+
+
+Output
+    21
+
+
+
+The maximum value is 19 and the minimum value is 2.
+
+
+-------------------------------------------------------------------
+
+
+
+
+
+def getMin(arr, n):
+    res = arr[0]
+    for i in range(1, n):
+        res = min(res, arr[i])
+    return res
+
+# Function to find maximum element
+def getMax(arr, n):
+    res = arr[0]
+    for i in range(1, n):
+        res = max(res, arr[i])
+    return res
+
+# Function to get Sum
+def findSum(arr, n):
+    min = getMin(arr, n)
+    max = getMax(arr, n)
+
+    return min + max
+
+if __name__ == "__main__":
+
+    arr = [ 10, 15, 4, 19, 2, 12 ]
+    n = len(arr)
+
+    # Sum of min and max element
+    print(findSum(arr, n))

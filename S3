@@ -1,0 +1,67 @@
+
+Odd occurrence of element in an array
+Tags:	Array
+Given an array of positive integers A, check the array for the odd occurrence(s) of at least one element.
+
+
+
+Display 1 if an array has odd occurrences of at least one element otherwise 0.
+
+
+
+Input
+    12
+    1 2 3 4 5 1 2 3 4 5 6 7
+
+
+
+    Where,
+
+First line contains size of array N.
+Second line contains array elements.
+
+
+Output
+    1
+
+
+
+Here for the given array, all elements of array repeated an even number of times except 6 and 7. Hence output is 1.
+
+
+
+---------------------------------------------------------
+
+
+def solve(nums):
+        list_ele,list_occ=[],[]
+        for i in nums:
+            occur=nums.count(i)
+            if(i not in list_ele):
+                list_ele.append(i)
+                list_occ.append(occur)
+        for i in list_occ:
+            occur=list_occ.count(i)
+            if(occur>1):
+                return 1
+        return 0
+print(solve([1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6, 7]))
+
+---------------------------------------------------------
+
+class Solution(object):
+   def uniqueOccurrences(self, arr):
+      d = {}
+      for i in arr:
+         if i not in d:
+            d[i] =1
+         else:
+            d[i]+=1
+      l = {}
+      for x, y in d.items():
+         if y in l:
+            return 1
+         l[y] = 1
+      return 0
+ob1 = Solution()
+print(ob1.uniqueOccurrences([1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6, 7]))
